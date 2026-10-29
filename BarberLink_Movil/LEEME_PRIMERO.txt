@@ -1,0 +1,20 @@
+BARBERLINK MÓVIL — PRIMERA VERSIÓN PWA
+
+Esta carpeta contiene una aplicación web móvil independiente, no una APK compilada.
+API configurada: https://barberlink-api-xj8e.onrender.com
+
+PUBLICACIÓN GRATIS (RECOMENDADO):
+1. Crea un NUEVO repositorio de GitHub llamado BarberLink-Movil, separado de BarberLink-API.
+2. Sube a la RAÍZ del nuevo repositorio todos los archivos de esta carpeta (index.html, app.js, style.css, manifest.webmanifest, sw.js, icons/).
+3. Publica el repositorio como sitio estático en Cloudflare Pages o servicio estático equivalente con HTTPS.
+4. IMPORTANTE: el navegador necesita CORS en la API. Si las barberías no cargan, agrega una política CORS en Program.cs que permita EXCLUSIVAMENTE el origen HTTPS de tu web móvil y vuelve a desplegar la API.
+5. Abre la web en Chrome Android y usa «Añadir a pantalla de inicio» / «Instalar aplicación» cuando esté disponible.
+6. La APK es una fase posterior (por ejemplo con PWABuilder), una vez verificada la PWA pública.
+
+NOTAS IMPORTANTES:
+- No pongas secretos de Neon ni Jwt__Key en este proyecto web.
+- Las sesiones se mantienen durante la pestaña actual (sessionStorage), no se almacenan contraseñas.
+- Los horarios se consultan a la API real; la API debe interpretar fecha/hora en America/La_Paz.
+- Verificar todos los endpoints y roles antes de usarlo con clientes reales.
+- Render Free puede dormirse y tardar en responder.
+- Para probar localmente, sirve esta carpeta con un servidor HTTP; abrir index.html directamente no habilita Service Worker.
